@@ -1,39 +1,8 @@
+const formData = new FormData();
+formData.append('login', 'john.doe');
+formData.append('password', 'johndoe123');
 
-var objPeople = [
-    {
-        username: "mlinkify",
-        password: "test",
-    },
-    {
-        username: "Mlinkify",
-        password: "Test",
-    },
-    {
-        username: "MlinkIfy",
-        password: "Test",
-    }
-
-]
-
-
-
-
-
-
-function getInfo() {
-    var username = document.getElementById("username").value
-    var password = document.getElementById("password").value
-
-    for(i = 0; i < objPeople.length; i++) {
-    if(username == objPeople[i].username && password == objPeople[i].
-        password) {
-        then window.location = "https://jlinkify.github.io/mlinkify/";
-        return
-
-
-    }
-    console.log("incorrect username or password")
-}
-
-
-
+fetch("/api/user/login", {
+    body: formData,
+    method: "post"
+});
