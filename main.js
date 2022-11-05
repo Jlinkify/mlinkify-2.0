@@ -1,7 +1,18 @@
+
 var objPeople = [
     {
-        password: "day1test"
+        username: "mlinkify",
+        password: "test",
+    },
+    {
+        username: "Mlinkify",
+        password: "Test",
+    },
+    {
+        username: "MlinkIfy",
+        password: "Test",
     }
+
 ]
 
 
@@ -10,13 +21,19 @@ var objPeople = [
 
 
 function getInfo() {
-var password = document.getElementById("password").value
-console.log("you're password is" + password)
-}
+    var username = document.getElementById("username").value
+    var password = document.getElementById("password").value
+
+    for(i = 0; i < objPeople.length; i++) {
+    if(username == objPeople[i].username && password == objPeople[i].
+        password) {
+        console.log(username + " is logged in!!!")
+        return
 
 
-for(i =0; i < objPeople.length; i++) {
-    if(password == objPeople[i].password) {
-        console.log("hello bitch")
     }
+    console.log("incorrect username or password")
 }
+
+
+
