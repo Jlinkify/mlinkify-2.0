@@ -1,0 +1,11 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+#password-form {
+	display: inline-block;
+	margin: 0 auto;
+	text-align: left;
+}
+
